@@ -13,7 +13,16 @@ fn main() -> Result<()> {
     };
 
     let mut tree = Tree::default();
-    let mut textb: String = "".to_string();
+    let mut textb: String = r#"
+    {
+        "name": "John Doe",
+        "age": 43,
+        "phones": [
+            "+44 1234567",
+            "+44 2345678"
+        ]
+    }"#
+    .to_string();
 
     let _ = eframe::run_simple_native("jsonv - JSON Viewer", options, move |ctx, _frame| {
         ctx.set_visuals(egui::style::Visuals::dark());
